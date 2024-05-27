@@ -1,0 +1,25 @@
+<div class="p-4 bg-body-secondary">
+  <div class="row row-cols-sm-4 g-sm-4 gy-sm-4">
+    <div class="col" *ngFor="let filme of listaFilmes">
+      <div class="card border-dark text-bg-dark mb-3 text-bg-info h-100">
+        <img [src]="filme.posterUrl" class="card-img-top h-100" alt="imagem"
+        (error)="handleMissingImage($event)"
+        />
+        <div class="card-body h-50">
+          <h5 class="card-title">{{ filme.title }}</h5>
+          <p class="card-text">{{ filme.plot }}</p>
+        </div>
+        <ul class="list-group list-group-flush list-group-item-dark">
+          <li class="list-group-item">Gênero: {{ filme.genres }}</li>
+          <li class="list-group-item">Diretor: {{ filme.director }}</li>
+          <li class="list-group-item">Ano: {{ filme.year }}</li>
+        </ul>
+        <div class="card-body text-end">
+          <a href="#" class="btn btn-sm btn-warning
+          ">assistir</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

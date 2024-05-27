@@ -1,0 +1,62 @@
+<div class="container text-center">
+  <div class="row row-cols-2 p-2">
+    <div class="col">
+      <!-- Interpolação -->
+      <div class="card text-center">
+        <div class="card-header">Conheça Data Binding</div>
+        <div class="card-body">
+          <h5 class="card-title">Interpolação de Dados</h5>
+          <p class="card-text">
+            O texto abaixo é o conteúdo de uma variável no Typescript
+          </p>
+          <p class="card-text">Professor: {{ nome }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <!-- two way data binding -->
+      <div class="card text-center">
+        <div class="card-header">Conheça Data Binding</div>
+        <div class="card-body">
+          <h5 class="card-title">Two Way Data Binding</h5>
+          <p class="card-text">
+            O que escrevo aqui aparece lá simultaneamente...
+          </p>
+          <input type="text" [(ngModel)]="texto" name="campo"/>
+          <label for="campo" class="m-2">{{texto}}</label>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <!-- event binding -->
+      <div class="card text-center">
+        <div class="card-header">Conheça Data Binding</div>
+        <div class="card-body">
+          <h5 class="card-title">Event Binding</h5>
+          <p class="card-text">
+            O evento do botão abaixo é acionado por binding
+          </p>
+          <p class="card-text">
+            O melhor: Não precisa adicionar Event Lisneter! :)
+          </p>
+          <a class="btn btn-primary" (click)="acaoBotao()">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <!-- property binding -->
+      <div class="card text-center">
+        <div class="card-header">Conheça Data Binding</div>
+        <div class="card-body">
+          <h5 class="card-title">Property Binding</h5>
+          <p class="card-text">
+            A propriedade da tag HTML abaixo é o conteúdo de uma variável no
+            Typescript
+          </p>
+          <p class="card-text">Nasa Picture Of The Day:</p>
+        </div>
+        <img [src]="urlPOD" class="card-img-bottom" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,8 +4,11 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [
-      "node"
-    ]
+      "node",
+      "@angular/localize"
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "files": [
     "src/main.ts",

@@ -1,0 +1,73 @@
+<h1 class="display-5 text-center">Diretivas Angular</h1>
+
+<div class="container">
+    <div class="row p-2">
+      <div class="col">
+        <div class="card">
+            <h5 class="card-header">NgIf</h5>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Special title treatment</h5> -->
+              <p class="card-text">O “ngIf” é uma condicional para adicionar ou remover algo do DOM. É muito parecido com o “If” padrão.</p>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" 
+                [ngModel]="estaLigado" 
+                [checked]="estaLigado" 
+                (change)="ligaDesliga()"
+                role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">ligar</label>
+              </div>
+              <p class="card-text" *ngIf="estaLigado">Aparece / Não Aparece</p>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card">
+            <h5 class="card-header">NgFor</h5>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Special title treatment</h5> -->
+              <p class="card-text">Loop de elementos com Ng For</p>
+              <ul>
+                <li *ngFor="let item of lista">{{item}}</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="row p-2">
+        <div class="col">
+            <div class="card">
+                <h5 class="card-header">NgSwitch</h5>
+                <div class="card-body">
+                  <p class="card-text">Permite alternar entre diferentes blocos de conteúdo com base em uma condição</p>
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <select [(ngModel)]="selecao" class="form-select mb-4">
+                        <option *ngFor="let opcao of listaOpcoes">{{ opcao }}</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <label [ngSwitch]="selecao" class="form-label mb-4">
+                        <div *ngSwitchCase="listaOpcoes[0]">Nome</div>
+                        <div *ngSwitchCase="listaOpcoes[1]">Endereço</div>
+                        <div *ngSwitchCase="listaOpcoes[2]">Telefone</div>
+                        <div *ngSwitchCase="listaOpcoes[3]">Estado</div>
+                      </label>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+          </div>
+        <div class="col">
+            <div class="card">
+                <h5 class="card-header">NgModel</h5>
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Special title treatment</h5> -->
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+
+
