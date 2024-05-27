@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import moviesDB from '../../assets/movielist.json';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-filmes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule ],
   templateUrl: './filmes.component.html',
   styleUrl: './filmes.component.scss',
 })

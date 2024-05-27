@@ -5,7 +5,7 @@
         <img [src]="filme.posterUrl" class="card-img-top h-100" alt="imagem"
         (error)="handleMissingImage($event)"
         />
-        <div class="card-body h-50">
+        <div class="card-body h-25">
           <h5 class="card-title">{{ filme.title }}</h5>
           <p class="card-text">{{ filme.plot }}</p>
         </div>
@@ -14,9 +14,15 @@
           <li class="list-group-item">Diretor: {{ filme.director }}</li>
           <li class="list-group-item">Ano: {{ filme.year }}</li>
         </ul>
-        <div class="card-body text-end">
-          <a href="#" class="btn btn-sm btn-warning
-          ">assistir</a>
+        
+        <div class="card-body">
+          <div>
+            <span *ngFor="let genero of filme.genres" class="badge bg-success m-1">{{ genero }}</span>
+          </div>
+          <div class="text-end">
+            <a href="#" class="btn btn-sm btn-warning">assistir</a>
+          </div>
+          
         </div>
       </div>
     </div>
