@@ -1,7 +1,7 @@
-<div class="p-4 bg-body-secondary">
+<div class="p-4 bg-dark mt-lg-5">
   <div class="row row-cols-sm-4 g-sm-4 gy-sm-4">
     <div class="col" *ngFor="let filme of listaFilmes">
-      <div class="card border-dark text-bg-dark mb-3 text-bg-info h-100">
+      <div class="card border-warning border-4 text-bg-dark mb-3 text-bg-info h-100">
         <img [src]="filme.posterUrl" class="card-img-top h-100" alt="imagem"
         (error)="handleMissingImage($event)"
         />
